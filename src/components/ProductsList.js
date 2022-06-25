@@ -6,7 +6,7 @@ import { useGetProducts } from "../hooks/useGetProducts";
 import { selectProduct } from "../redux/productsSlice";
 
 const ProductList = () => {
-  // const products = useSelector((state) => state.products.items);
+  const products = useSelector((state) => state.products.items);
   const dispatch = useDispatch();
 
   // const { data: products, error } = useSWR("products", () => {
@@ -14,7 +14,7 @@ const ProductList = () => {
   // });
   const [count, setCount] = useState(0);
 
-  const products = useGetProducts();
+  // const products = useGetProducts();
 
   const handleSelectProduct = useCallback((product) => {
     dispatch(selectProduct(product));
